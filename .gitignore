@@ -1,0 +1,39 @@
+# Arduino & PlatformIO typical ignores
+
+# Compiled binary files
+*.hex
+*.elf
+*.bin
+
+# Arduino build folders
+build/
+*.pio/
+.pioenvs/
+.piolibdeps/
+.pio/
+.tmp/
+
+# Libraries installed locally
+lib/
+libraries/
+
+# IDE files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and backups
+*.log
+*.bak
+*.tmp
+
+# OS metadata
+*.swp
+*.swo
+ehthumbs.db
+desktop.ini
+
+# Optional: exclude generated docs/media if large
+docs/output/
+media/videos/
