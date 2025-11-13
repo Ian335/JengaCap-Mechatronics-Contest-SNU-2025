@@ -6,7 +6,7 @@ const int servoPin = 3;
 void setup() {
   myservo.attach(servoPin);
   Serial.begin(9600);
-  myservo.write(90);  // 초기 정지 상태
+  myservo.write(90);  // initial stop position
 }
 
 void loop() {
@@ -14,15 +14,15 @@ void loop() {
     char command = Serial.read();
 
     if (command == 'a') {
-      // 반시계방향 회전
-      myservo.write(0);   // 90보다 작으면 반시계
+      // Counterclockwise rotation
+      myservo.write(0);   // less than 90degrees -> counterclockwise rotation
       delay(50);
       myservo.write(90);   // 정지
     } else if (command == 'b') {
-      // 시계방향 회전
-      myservo.write(180);  // 90보다 크면 시계
+      // rotate clockwise
+      myservo.write(180);  // greater than 90degrees -> counterclockwise rotation
       delay(50);
-      myservo.write(90);   // 정지
+      myservo.write(90);   // stop
     }
   }
 }
